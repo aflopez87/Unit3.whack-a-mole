@@ -1,13 +1,12 @@
 import { useContext } from "react"
 import { GameContext } from "../UseGame" 
 function ScoreCard() {
-    const {score, setPLaying} = useContext(GameContext)
+    const {score, setPlaying} = useContext(GameContext);
 
     return (
-      <>
-     <h1>Score Card</h1>
-     <button>RestartGame setPlaying(false)</button>
-  
+    <>
+     <p className="scorecard">Score: {score}</p>
+     <button onClick={()=>setPlaying(false)} score={score}>Restart</button>
       </>
     )
   }
